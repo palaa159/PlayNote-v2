@@ -49,10 +49,8 @@ io.sockets.on('connection', function(socket) {
 		var mailList = '',
 			bandMembers = '';
 		for(var i = 0; i < data.length; i++) {
-			if(data[i].email !== null) {
-				mailList += data[i].email + ',';
-				bandMembers += data[i].instrument + '<br>' + data[i].name + ' - ' + data[i].email + '<br>';
-			}
+			mailList += data[i].email + ',';
+			bandMembers += data[i].instrument + '-' + data[i].name + ' <' + data[i].email + '><br>';
 		}
 		// remove ,
 		mailList = mailList.substring(0, mailList.length-1);
