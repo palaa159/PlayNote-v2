@@ -88,7 +88,9 @@ var GLOBAL = {
 
 			if (currentData.length > 0) { // if haz data, play
 				APP.play();
-				APP.advertise();
+				if(random(1,10) > 6) {
+					APP.advertise();
+				}
 			} else {
 				console.log('running DEMO');
 				// Be the first
@@ -145,7 +147,7 @@ var GLOBAL = {
 			$('#inviteContainer')
 				.removeClass()
 				.addClass('animated');
-			var words = ['Hi friends.', 'Be the first music jammer.', 'PlayNote is collaborative.', 'Ready to rock n\' roll?', 'PlayNote is music to your ears.', 'Wanna feel a little jazzy?'],
+			var words = ['Hi friends.', 'Be the music jammer.', 'PlayNote is collaborative.', 'PlayNote is music to your ears.', 'Wanna feel a little jazzy?'],
 				randWord = Math.floor(Math.random() * words.length),
 				animation = ['flipInX', 'swing', 'fadeInRightBig', 'rotateInDownRight'],
 				randAnimation = Math.floor(Math.random() * animation.length);

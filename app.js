@@ -57,9 +57,9 @@ var smtpTransport = nodemailer.createTransport("SMTP", {
 
 var mailOptions = {
 	from: "Elizabeth Clare <hello@playnoteco.com>", // sender address
-	to: "reach.apon@gmail.com, elizabethc.clare@gmail.com", // list of receivers
+	// to: "reach.apon@gmail.com, elizabethc.clare@gmail.com", // list of receivers
 	subject: "Thanks for participating PlayNote at SXSW '14", // Subject line
-	html: "Thank you for sharing your melody. <br>Our helper elves are working hard to reply with the collaborative song you made <3. <br>And for the band members: <br>"
+	html: "Thank you for sharing your melody. <br>Our helper elves are working hard to reply with the collaborative song you made <3."
 };
 
 smtpTransport.sendMail(mailOptions, function(error, response) {
