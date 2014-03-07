@@ -51,7 +51,8 @@ function Countdown(options) {
 
 function randHSL() { // hsl(x,y,z)
 	var h = Math.floor(Math.random() * 360) + 1;
-	var color = 'hsl(' + h + ', 75%, 50%)';
+	var s = Math.floor(Math.random() * 75) + 50;
+	var color = 'hsl(' + h + ', ' + s +  '%, 50%)';
 	return color;
 }
 
