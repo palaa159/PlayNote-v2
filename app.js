@@ -4,6 +4,7 @@ var express = require('express'),
 	server = http.createServer(app),
 	io = require('socket.io').listen(server),
 	nodemailer = require("nodemailer"),
+	util = require('util'),
 	fs = require('fs');
 
 var playnote = {
