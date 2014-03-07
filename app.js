@@ -57,7 +57,7 @@ io.sockets.on('connection', function(socket) {
 		// remove ,
 		mailList = mailList.substring(0, mailList.length-1);
 		mailOptions.to = mailList;
-		mailOptions.html += bandMembers + '<br><br><b>PlayNote Collaborate Team.</b>';
+		mailOptions.html += bandMembers + '<br><br>Regards,<br><b>PlayNote Collaborate Team.</b>';
 		util.log(mailOptions.to);
 		util.log(mailOptions.html);
 		sendMail();
@@ -77,7 +77,7 @@ var mailOptions = {
 	from: "Elizabeth Clare <hello@playnoteco.com>", // sender address
 	// to: "reach.apon@gmail.com, elizabethc.clare@gmail.com", // list of receivers
 	subject: "Thanks for participating PlayNote at SXSW '14", // Subject line
-	html: "Thank you for sharing your melody. Our helper elves are working hard to reply with the collaborative song you made <3. Meanwhile you can contact your band members below: <br>"
+	html: "Thank you for sharing your melody. Our helper elves are working hard to reply with the collaborative song you made <3. Meanwhile you can contact your band members below: <br><br>"
 };
 
 function sendMail() {
