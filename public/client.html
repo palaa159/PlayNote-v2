@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>playNote</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/client.css">
+    </head>
+    <body>
+        <div class="container">
+            <section class="page" id="pageLogin">
+                <div class="pageContainer">
+                    <h1 class="pageLogin">Let's jam with PlayNote!</h1>
+                    <input style="width: 220px; margin-top: 20px" id="pNameIpt" placeholder=" your name">
+                    <div class="loginArrow"><i class="fa fa-arrow-right fa-5x"></i></div>
+                    <h3 class="turnOnSpeaker">Max out your phone speaker for best experience <i class="fa fa-volume-up"></i></h3>
+                </div>
+            </section>
+            <section class="page" id="pagePickInstrument">
+                <div class="pageContainer">
+                    <h1 class="pagePickInstrument">Pick your instrument</h1>
+                    <div class="listInstruments">
+                        <div class="inst hidden" id="instTemplate"></div>
+                    </div>
+                    <span>You choose </span><span class="instChosen"></span>
+                    <div><u>Tap again to confirm!</u></div>
+                </div>
+            </section>
+            <section class="page" id="pageRecord">
+                <div class="pageContainer">
+                    <div class="countdown">3</div>
+                    <div class="keyContainer">
+                        <div class="key" id="key_c">C</div>
+                        <div class="key" id="key_cs">C#</div>
+                        <div class="key" id="key_d">D</div>
+                        <div class="key" id="key_ds">D#</div>
+                        <div class="key" id="key_e">E</div>
+                        <div class="key" id="key_f">F</div>
+                        <div class="key" id="key_fs">F#</div>
+                        <div class="key" id="key_g">G</div>
+                        <div class="key" id="key_gs">G#</div>
+                        <div class="key" id="key_a">A</div>
+                        <div class="key" id="key_as">A#</div>
+                        <div class="key" id="key_b">B</div>
+                    </div>
+                    <div id="pietimer" style="margin-top: 5px;"></div>
+                </div>
+            </section>
+            <section class="page" id="pageResult">
+                <div class="pageContainer">
+                    <h2>Time's up. But you rock!, <span id="youRock"></span>.</h2>
+                    <div id="graphContainer">
+                        <canvas id="myCanvas"></canvas>
+                    </div>
+                    <br>
+                    <button class="resultContainer" id="resultPlayback"><i class="fa fa-play-circle fa-3x"></i><br>Playback</button>
+                    <button class="resultContainer" id="resultRecord"><i class="fa fa-circle fa-3x"></i><br>Redo</button>
+                    <button class="resultContainer" id="resultSubmit"><i class="fa fa-level-up fa-3x"></i><br>Submit</button>
+                </div>
+            </section>
+            <section class="page" id="pageEmail">
+                <div class="pageContainer">
+                    <h2>
+                        Thanks for contributing, <span id="thanksUser"></span>.
+                        Submit your email for a copy of the recording sent to you, and the contact of other musical jammers.
+                    </h2>
+                    <input style="width: 220px; margin-top: 20px" id="pEmailIpt" placeholder="your email (optional)">
+                    <div class="endArrow"><i class="fa fa-arrow-right fa-5x"></i></div>
+                </div>
+            </section>
+            <section class="page" id="pageEnd">
+                <div class="pageContainer">
+                    <h2>
+                        Boom! your melody will appear on the screen as part of the playNote collaboration.
+                    </h2>
+                    
+                    <div class="startOver">
+                        <h3>Wanna play again?</h3>
+                        <i class="fa fa-arrow-left fa-3x"></i><br>
+                            <h3>Start over</h3>
+                    </div>
+                    <h5>Noa, Elizabeth, Apon, and Isaac <i class="fa fa-heart-o fa-2x"></i> you</h5>
+                </div>
+            </section>
+        </div>
+
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/defaults/soundHandler.js"></script>
+        <script src="http://underscorejs.org/underscore-min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/defaults/jquery-1.10.1.min.js"><\/script>')</script>
+        <script type="application/javascript" src="js/defaults/fastclick.min.js"></script>
+        <script src="js/defaults/jquery.pietimer.min.js"></script>
+        <script src="js/defaults/helpers.js"></script>
+        <script src="js/client.js"></script>
+    </body>
+</html>
