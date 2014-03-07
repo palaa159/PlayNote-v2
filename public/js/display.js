@@ -126,7 +126,7 @@ var GLOBAL = {
 							.ease('bounce');
 						// play sound
 						// $('#debug').html(Math.round(parseInt(APP.playerSvg[i][0][0].attributes.cy.value) / GLOBAL.h * 12));
-						playSound(SOUNDS.indexOf(APP.playerSvg[i][0][0].attributes.title.value), noteToMultiplier(Math.round(parseInt(APP.playerSvg[i][0][0].attributes.cy.value) / GLOBAL.h * 12)), 1, parseInt(APP.playerSvg[i][0][0].attributes.cx.value) / GLOBAL.w - 0.5, parseInt(APP.playerSvg[i][0][0].attributes.cy.value) / GLOBAL.h - 0.5);
+						playSound(SOUNDS.indexOf(APP.playerSvg[i][0][0].attributes.title.value), noteToMultiplier(Math.round(parseInt(APP.playerSvg[i][0][0].attributes.cy.value) / GLOBAL.h * 12)) - 0.5, 1, parseInt(APP.playerSvg[i][0][0].attributes.cx.value) / GLOBAL.w - 0.5, parseInt(APP.playerSvg[i][0][0].attributes.cy.value) / GLOBAL.h - 0.5);
 					}
 
 				}
