@@ -50,7 +50,7 @@ io.sockets.on('connection', function(socket) {
 			bandMembers = '';
 		for(var i = 0; i < data.length; i++) {
 			if(data[i].email !== null) {
-				mailList += data[i].name + ',';
+				mailList += data[i].email + ',';
 				bandMembers += data[i].instrument + '<br>' + data[i].name + ' - ' + data[i].email + '<br>';
 			}
 		}
