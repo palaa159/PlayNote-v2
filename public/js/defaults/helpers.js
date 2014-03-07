@@ -64,46 +64,87 @@ function instToIndex(inst) {
 	return SOUNDS.indexOf(inst);
 }
 
-function noteToMultiplier(note) {
+function noteToMultiplier(note) { // but is pentatonic now
 	switch (note) {
-		case 'key_c':
+		case 'key_c': //c
 		case 0:
 			return 1;
-		case 'key_cs':
+		case 'key_cs': //d
 		case 1:
-			return 1.059435;
-		case 'key_d':
+			return 1.122; 
+		case 'key_d': //e
 		case 2:
-			return 1.122;
-		case 'key_ds':
-		case 3:
-			return 1.1891;
-		case 'key_e':
-		case 4:
 			return 1.2599;
-		case 'key_f':
-		case 5:
-			return 1.3348;
-		case 'key_fs':
-		case 6:
-			return 1.4141;
-		case 'key_g':
-		case 7:
-			return 1.4982;
-		case 'key_gs':
-		case 8:
+		case 'key_ds': //g
+		case 3:
 			return 1.587;
-		case 'key_a':
-		case 9:
+		case 'key_e': //a
+		case 4:
 			return 1.6817;
-		case 'key_as':
+		case 'key_f': // c
+		case 5:
+			return 1.9999;
+		case 'key_fs': // d
+		case 6:
+			return 2.2448;
+		case 'key_g': // e
+		case 7:
+			return 2.5197;
+		case 'key_gs': // g
+		case 8:
+			return 2.9965;
+		case 'key_a': // a
+		case 9:
+			return 3.3635;
+		case 'key_as': // c
 		case 10:
-			return 1.7817;
-		case 'key_b':
+			return 3.9999;
+		case 'key_b': // d
 		case 11:
-			return 1.8877;
+			return 4.4897;
 	}
 }
+
+// function noteToMultiplier(note) {
+// 	switch (note) {
+// 		case 'key_c':
+// 		case 0:
+// 			return 1;
+// 		case 'key_cs':
+// 		case 1:
+// 			return 1.059435;
+// 		case 'key_d':
+// 		case 2:
+// 			return 1.122;
+// 		case 'key_ds':
+// 		case 3:
+// 			return 1.1891;
+// 		case 'key_e':
+// 		case 4:
+// 			return 1.2599;
+// 		case 'key_f':
+// 		case 5:
+// 			return 1.3348;
+// 		case 'key_fs':
+// 		case 6:
+// 			return 1.4141;
+// 		case 'key_g':
+// 		case 7:
+// 			return 1.4982;
+// 		case 'key_gs':
+// 		case 8:
+// 			return 1.587;
+// 		case 'key_a':
+// 		case 9:
+// 			return 1.6817;
+// 		case 'key_as':
+// 		case 10:
+// 			return 1.7817;
+// 		case 'key_b':
+// 		case 11:
+// 			return 1.8877;
+// 	}
+// }
 
 function milliToX(milli) {
 	// 1000
