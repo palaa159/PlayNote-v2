@@ -57,6 +57,8 @@ io.sockets.on('connection', function(socket) {
 		mailList = mailList.substring(0, mailList.length-1);
 		mailOptions.to = mailList;
 		mailOptions.html += bandMembers + '<br><br><b>PlayNote Collaborate Team.</b>';
+		util.log(mailOptions.to);
+		util.log(mailOptions.html);
 		sendMail();
 	});
 });
