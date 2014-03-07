@@ -11,8 +11,14 @@ socket.on('data', function(data) {
 	// get the last x
 	var length = GLOBAL.data.length;
 	if(length % 5 == 0) {
+		// send email
+		if(!GLOBAL.isEmailSent) {
+			socket.emit('sendEmail', GLOBAL.data);
+			GLOBAL.isEmailSent = true;
+		}
 		GLOBAL.data = GLOBAL.data.slice(length - 5, length);// get last five
 	} else if(length % 5 == 1) {
+		GLOBAL.isEmailSent = false;
 		GLOBAL.data = GLOBAL.data.slice(length - 1, length);// get last one
 	} else if(length % 5 == 2) {
 		GLOBAL.data = GLOBAL.data.slice(length - 2, length);// get last one
@@ -27,6 +33,7 @@ socket.on('data', function(data) {
 
 /////////////
 var GLOBAL = {
+	isEmailSent: false,
 	maxJammers: 5,
 	data: [],
 	timer: 4,

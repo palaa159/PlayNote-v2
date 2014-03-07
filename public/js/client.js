@@ -230,7 +230,7 @@ $('.loginArrow').on('click', debounceLogin);
 $('.key').on('click', function() {
 	// play sound
 	var note = $(this).attr('id');
-	playSound(instToIndex(USER.instrument), noteToMultiplier(note), 1, 1, 1);
+	playSound(instToIndex(USER.instrument), noteToMultiplier(note) - 0.5, 1, 1, 1);
 	USER.compo.push([MEDIA.tick, $(this).attr('id')]);
 });
 
