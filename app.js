@@ -7,7 +7,7 @@ var express = require('express'),
 	fs = require('fs');
 
 var playnote = {
-	timer: 10
+	timer: 6
 };
 
 server.listen(7000);
