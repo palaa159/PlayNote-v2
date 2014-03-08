@@ -31,6 +31,11 @@ socket.on('data', function(data) {
 	}
 });
 
+// DEMO
+$('#playerLegend').click(function() {
+	GLOBAL.isDemo = !GLOBAL.isDemo;
+});
+
 /////////////
 var GLOBAL = {
 	isDemo: false,
