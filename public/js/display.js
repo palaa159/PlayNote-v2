@@ -145,13 +145,18 @@ var GLOBAL = {
 					}
 
 				}
+				if(GLOBAL.w * APP.time / (GLOBAL.timer * 60) >= GLOBAL.w) {
+					APP.time = 0;
+					window.clearInterval(APP.interval);
+					APP.startTimer();
+				}
 			}, 1000 / 60);
 			// LOOPING INFINITELY
-			APP.timer = setTimeout(function() {
-				timer = 0;
-				window.clearInterval(APP.interval);
-				APP.startTimer();
-			}, GLOBAL.timer * 1000 + 2000);
+			// APP.timer = setTimeout(function() {
+			// 	timer = 0;
+			// 	window.clearInterval(APP.interval);
+			// 	APP.startTimer();
+			// }, GLOBAL.timer * 1000 + 2000);
 		},
 		stopTimer: function() {
 			clearTimeout(APP.timer);
