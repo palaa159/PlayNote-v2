@@ -151,7 +151,7 @@ var GLOBAL = {
 				timer = 0;
 				window.clearInterval(APP.interval);
 				APP.startTimer();
-			}, GLOBAL.timer * 1000 + 1500);
+			}, GLOBAL.timer * 1000 + 2000);
 		},
 		stopTimer: function() {
 			clearTimeout(APP.timer);
