@@ -120,7 +120,7 @@ var GLOBAL = {
 							.transition()
 							.duration(random(200, 300))
 							.attr({
-								r: random(100, 150)
+								r: random(120, 200)
 							});
 						APP.playerSvg[i]
 							.transition()
@@ -128,7 +128,7 @@ var GLOBAL = {
 							.duration(random(500, 1000))
 							.attr({
 								// r: random(10, 20)
-								r: 5
+								r: random(3,7)
 							})
 							.ease('bounce');
 						// play sound
