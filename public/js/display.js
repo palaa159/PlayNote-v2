@@ -247,7 +247,7 @@ var GLOBAL = {
 					APP.playerSvg[k]
 						.transition()
 						.attr({
-							r: 5
+							r: random(3,7)
 						})
 						.ease('elastic');
 					k++;
