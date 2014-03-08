@@ -33,6 +33,7 @@ socket.on('data', function(data) {
 
 /////////////
 var GLOBAL = {
+	isDemo: false,
 	isEmailSent: false,
 	maxJammers: 5,
 	data: [],
@@ -93,15 +94,17 @@ var GLOBAL = {
 			console.log('current jammers: ' + currentData.length);
 			APP.time = 0;
 
-			if (currentData.length > 0) { // if haz data, play
+			if(isDemo) {
+				console.log('running DEMO');
+				// Be the first
+				APP.deployPlayers(APP.randomPlayer()); // return playerArray
+				APP.advertise();
+			}
+			else {
 				APP.play();
 				if(random(1,10) > 6) {
 					APP.advertise();
 				}
-			} else {
-				console.log('running DEMO');
-				// Be the first
-				APP.deployPlayers(APP.randomPlayer()); // return playerArray
 			}
 
 			APP.interval = setInterval(function() {
