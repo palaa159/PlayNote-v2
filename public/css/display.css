@@ -57,6 +57,7 @@ h2 {
 	width: 2px;
 	height: 95%;
 	background: #9b9b9b;
+	z-index: 9;
 }
 
 #inviteContainer {
