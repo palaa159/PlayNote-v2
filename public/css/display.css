@@ -117,6 +117,5 @@ h2 {
 }
 
 svg {
-	transform: 'scale(1,-1)';
-	-webkit-transform: 'scale(1,-1)';
+	-webkit-transform: scaleY(-1);
 }
