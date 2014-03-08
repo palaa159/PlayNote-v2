@@ -94,7 +94,7 @@ var GLOBAL = {
 			console.log('current jammers: ' + currentData.length);
 			APP.time = 0;
 
-			if(isDemo) {
+			if(GLOBAL.isDemo) {
 				console.log('running DEMO');
 				// Be the first
 				APP.deployPlayers(APP.randomPlayer()); // return playerArray
