@@ -77,7 +77,7 @@ h2 {
 
 .loginArrow {
 	margin: 20px auto;
-	display: none;
+	/*display: none;*/
 	/*border: 5px solid black;*/
 	width: 85px;
 	height: 85px;
