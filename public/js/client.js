@@ -72,7 +72,7 @@ var GLOBAL = {
 				}, 1000);
 				$('#pNameIpt').on('input', function() {
 					if ($('#pNameIpt').val().length < 3) {
-						$('.loginArrow').hide();
+						// $('.loginArrow').hide();
 					} else {
 						$('.loginArrow').show().addClass('animated bounceInLeft');
 					}
