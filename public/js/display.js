@@ -107,7 +107,7 @@ var GLOBAL = {
 			}
 			else {
 				APP.play();
-				if(random(1,10) > 3) {
+				if(random(1,10) > 2) {
 					APP.advertise();
 				}
 			}
